@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import Footer from './components/Footer';
 
 
 class WaterHeaterInfo extends Component {
@@ -19,7 +20,7 @@ class WaterHeaterInfo extends Component {
        onSubmit =event => {
          event.prevent.Default();
          this.props.submit(this.state);
-         
+
        }
 
 
@@ -60,6 +61,7 @@ class WaterHeaterInfo extends Component {
           <input type= "submit" value="Submit" />
 
         </form>
+     
     </div>
     );
   }

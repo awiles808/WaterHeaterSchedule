@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import WaterHeaterInfo from './components/WaterHeaterInfo';
+import CustomerInfo from './components/CustomerInfo';
 import Footer from './components/Footer';
+import MyRoutes from './ config/Routes'
+// import Routes from './ config/Routes';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Water Heater Schedule</h1>
-        </header>
-      <WaterHeaterInfo />
-      <Footer />
+      {/* <HomepageContainer /> */}
+      {/* <WaterHeaterInfo /> */}
+      { MyRoutes }
+      {/* <CustomerInfo />
+      <Footer /> */}
       </div>
     );
   }
