@@ -9,8 +9,8 @@ export default class Results extends Component{
     return (
       <Grid>
         <Jumbotron>
-          <h2>This Is The Results page</h2>
-          <p>Time to get to get better at bootsrtap!</p>
+          <h1>Results</h1>
+
         </Jumbotron>
         <Link to='/'>
           <Button bsStyle='primary'>Home</Button>
