@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import CustomerBackgroundPic from '../Images/CustomerBackgroundPic.jpg';
+import '../customerinfo.css';
 
 
 class CustomerInfo extends Component {
+  
     constructor(props){
       super(props);
       this.state = {
@@ -22,6 +25,8 @@ class CustomerInfo extends Component {
   render() {
     const {username,text} = this.state;
     return (
+    <div className="CustomerBackgroundPic">
+      <img src={ CustomerBackgroundPic } className= "photo" alt="Wood"/>
       <div className="CustomerInfo">
         <h3>Customer Info</h3>
         <form>
@@ -56,6 +61,8 @@ class CustomerInfo extends Component {
           <input type= "submit" value="Submit" />
         </form>
     </div>
+  </div>
+
     );
   }
 }

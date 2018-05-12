@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-// import Footer from './components/Footer';
+import HeaterInfo from '../Images/HeaterInfo.jpg';
+import '../waterheater.css';
 
 
 class WaterHeaterInfo extends Component {
@@ -27,6 +28,9 @@ class WaterHeaterInfo extends Component {
   render() {
     const {type,text} = this.state;
     return (
+      <div className="HeaterBackgroundPic" >
+      <img src={ HeaterInfo } className= "photo" alt="WaterSpots"/>;
+
       <div className="HeaterInfo">
         <h3>Water Heater Info</h3>
         <form>
@@ -61,8 +65,9 @@ class WaterHeaterInfo extends Component {
           <input type= "submit" value="Submit" />
 
         </form>
-     
+
     </div>
+  </div>
     );
   }
 }
