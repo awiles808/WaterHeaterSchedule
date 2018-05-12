@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import HomePageBacPic from '../Images/HomePageBacPic.jpg';
 import '../homepage.css';
+import { Link } from 'react-router-dom';
+// import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap'
 
 
 class Homepage extends Component {
