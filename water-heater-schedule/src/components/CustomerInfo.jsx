@@ -4,7 +4,7 @@ import '../customerinfo.css';
 
 
 class CustomerInfo extends Component {
-  
+
     constructor(props){
       super(props);
       this.state = {

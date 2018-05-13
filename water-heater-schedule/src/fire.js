@@ -1,7 +1,7 @@
 import firebase from 'firebase'
 
 // Initialize Firebase
-  var config = {
+  const config = {
     apiKey: "AIzaSyBkGmVHJAoJ-fGDp3zv3Xn1Sh8celcuw-M",
     authDomain: "water-heater-schedule.firebaseapp.com",
     databaseURL: "https://water-heater-schedule.firebaseio.com",
@@ -9,6 +9,11 @@ import firebase from 'firebase'
     storageBucket: "water-heater-schedule.appspot.com",
     messagingSenderId: "230214572469"
   };
-  firebase.initializeApp(config);
-var fire =firebase.initializeApp(config);
-export default fire;
+
+let fire = firebase.initializeApp(config);
+
+export default fire
+
+//   firebase.initializeApp(config);
+// var fire =firebase.initializeApp(config);
+// export default fire;
