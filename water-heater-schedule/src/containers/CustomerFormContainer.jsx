@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Homepage from '../components/Homepage';
 import Navbar from '../components/CustomNavbar';
+import Login from '../components/Login';
 
 
-class HomepageContainer extends Component {
+class CustomerFormContainer extends Component {
 	render() {
 		return (
 			<div>
 
         <Navbar />
-
-
+				<Login />
 
 			</div>
 
@@ -19,4 +18,4 @@ class HomepageContainer extends Component {
   	}
 }
 
-export default HomepageContainer
+export default CustomerFormContainer

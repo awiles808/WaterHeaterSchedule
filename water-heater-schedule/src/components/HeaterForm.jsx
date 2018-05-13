@@ -8,21 +8,21 @@ import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
 class HeaterForm extends Component {
   constructor(props) {
     super(props);
-    this.state = { messages: [] }; // <- set up react state
+    this.state = { Brands: [] }; // <- set up react state
   }
   componentWillMount(){
-    /* Create reference to messages in Firebase Database */
-    let messagesRef = fire.database().ref('messages').orderByKey().limitToLast(100);
-    messagesRef.on('child_added', snapshot => {
-      /* Update React state when message is added at Firebase Database */
-      let message = { text: snapshot.val(), id: snapshot.key };
-      this.setState({ messages: [message].concat(this.state.messages) });
+    /* Create reference to Brands in Firebase Database */
+    let brandsRef = fire.database().ref('Brands').orderByKey().limitToLast(100);
+    brandsRef.on('child_added', snapshot => {
+      /* Update React state when Brand is added at Firebase Database */
+      let Brand = { text: snapshot.val(), id: snapshot.key };
+      this.setState({ Brands: [Brand].concat(this.state.Brands) });
     })
   }
   addMessage(e){
     e.preventDefault(); // <- prevent form submit from reloading the page
-    /* Send the message to Firebase */
-    fire.database().ref('messages').push( this.inputEl.value );
+    /* Send the Brand to Firebase */
+    fire.database().ref('Brands').push( this.inputEl.value );
     this.inputEl.value = ''; // <- clear the input
   }
   render() {
@@ -35,8 +35,8 @@ class HeaterForm extends Component {
         <input type="submit"/>
 
 
-            { /* Render the list of messages */
-              this.state.messages.map( message => <li key={message.id}>{message.text}</li> )
+            { /* Render the list of Brands */
+              this.state.Brands.map( Brand => <li key={Brand.id}>{Brand.text}</li> )
             }
 
           </Jumbotron>

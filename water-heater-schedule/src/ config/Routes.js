@@ -7,6 +7,9 @@ import Form from '../components/Form';
 import HomepageContainer from '../containers/HomepageContainer';
 import HeaterForm from '../components/HeaterForm';
 import HeaterFormContainer from '../containers/HeaterFormContainer';
+import CustomerForm from '../components/CustomerForm';
+import CustomerFormContainer from '../containers/CustomerFormContainer';
+import Login from '../components/Login';
 // import Navbar from '../components/CustomNavbar';
 // import Homepage from '../components/Homepage';
 // import {BrowserRouter as Router, Route } from 'react-router-dom';
@@ -15,10 +18,14 @@ import HeaterFormContainer from '../containers/HeaterFormContainer';
 
 
 
-export default (
+export default
   <Switch>
 
-    <Route exact path='/' component={ HeaterFormContainer }/>
+
+    <Route exact path='/' component={ CustomerFormContainer }/>
+    <Route exact path='/login' component={ Login}/>
+    <Route exact path='/customer' component={ CustomerForm }/>
+    <Route exact path='/heater' component={ HeaterFormContainer }/>
     <Route exact path='/home' component={ HomepageContainer }/>
     <Route exact path='/form' component={ Form }/>
     <Route path='/customer' component={ CustomerInfo }/>
@@ -27,4 +34,3 @@ export default (
     {/* <Route exact path='/nav' component={ Navbar }/> */}
     {/* <Route exact path='/' component={ Homepage }/> */}
   </Switch>
-)

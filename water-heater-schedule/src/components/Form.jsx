@@ -7,21 +7,22 @@ import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
 class Form extends Component {
   constructor(props) {
     super(props);
-    this.state = { Names: [] }; // <- set up react state
+    this.state = { names:
+      [] }; // <- set up react state
   }
   componentWillMount(){
-    /* Create reference to Names in Firebase Database */
-    let namesRef = fire.database().ref('Names').orderByKey().limitToLast(100);
+    /* Create reference to names in Firebase Database */
+    let namesRef = fire.database().ref('names').orderByKey().limitToLast(100);
     namesRef.on('child_added', snapshot => {
-      /* Update React state when name is added at Firebase Database */
-      let name = { text: snapshot.val(), id: snapshot.key };
-      this.setState({ Names: [name].concat(this.state.Names) });
+      /* Update React state when message is added at Firebase Database */
+      let message = { text: snapshot.val(), id: snapshot.key };
+      this.setState({ names: [message].concat(this.state.names) });
     })
   }
   addMessage(e){
     e.preventDefault(); // <- prevent form submit from reloading the page
-    /* Send the name to Firebase */
-    fire.database().ref('Names').push( this.inputEl.value );
+    /* Send the message to Firebase */
+    fire.database().ref('names').push( this.inputEl.value );
     this.inputEl.value = ''; // <- clear the input
   }
   render() {
@@ -33,11 +34,6 @@ class Form extends Component {
         <input type="text" ref={ el => this.inputEl = el }/>
         <input type="submit"/>
 
-
-            { /* Render the list of Names */
-              this.state.Names.map( name => <li key={name.id}>{name.text}</li> )
-            }
-
           </Jumbotron>
         </Grid>
       </form>
@@ -47,3 +43,7 @@ class Form extends Component {
 }
 
 export default Form;
+
+// {/* { /* Render the list of names */
+//   this.state.names.map( message => <li key={message.id}>{message.text}</li> )
+// } */}

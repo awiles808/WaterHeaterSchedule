@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import fire from '../fire';
 import CustomerBackgroundPic from '../Images/CustomerBackgroundPic.jpg';
 import '../customerinfo.css';
-
 
 class CustomerInfo extends Component {
 
