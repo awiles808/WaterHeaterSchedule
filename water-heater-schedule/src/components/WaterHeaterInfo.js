@@ -28,8 +28,6 @@ class WaterHeaterInfo extends Component {
   render() {
     const {type,text} = this.state;
     return (
-      <div className="HeaterBackgroundPic" >
-      <img src={ HeaterInfo } className= "photo" alt="WaterSpots"/>;
 
       <div className="HeaterInfo">
         <h3>Water Heater Info</h3>
@@ -64,9 +62,14 @@ class WaterHeaterInfo extends Component {
           <br></br>
           <input type= "submit" value="Submit" />
 
-        </form>
+      </form>
+        <footer>
+          <div className="HeaterBackgroundPic" >
+          <img src={ HeaterInfo } className= "photo" alt="WaterSpots"/>;
+            </div>
+        </footer>
 
-    </div>
+
   </div>
     );
   }

@@ -25,8 +25,8 @@ class CustomerInfo extends Component {
   render() {
     const {username,text} = this.state;
     return (
-    <div className="CustomerBackgroundPic">
-      <img src={ CustomerBackgroundPic } className= "photo" alt="Wood"/>
+    // <div className="CustomerBackgroundPic">
+    //   <img src={ CustomerBackgroundPic } className= "photo" alt="Wood"/>
       <div className="CustomerInfo">
         <h3>Customer Info</h3>
         <form>
@@ -60,7 +60,13 @@ class CustomerInfo extends Component {
             <br></br>
           <input type= "submit" value="Submit" />
         </form>
-    </div>
+
+    <footer>
+      <div className="CustomerBackgroundPic" >
+      <img src={ CustomerBackgroundPic } className= "photo" alt="Wood"/>;
+        </div>
+    </footer>
+
   </div>
 
     );
