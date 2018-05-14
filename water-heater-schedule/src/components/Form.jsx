@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import fire from '../fire';
 import { Link } from 'react-router-dom';
+import CustomNavbar from './CustomNavbar';
 import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
 
 
@@ -28,6 +29,7 @@ class Form extends Component {
   render() {
     return (
       <div>
+          <CustomNavbar />
       <form onSubmit={this.addMessage.bind(this)}>
         <Grid>
           <Jumbotron>

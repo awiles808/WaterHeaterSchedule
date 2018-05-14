@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import fire from '../fire';
 import '../login.css';
+import CustomNavbar from './CustomNavbar';
 
 class Login extends Component {
   constructor(props) {
@@ -21,32 +22,33 @@ class Login extends Component {
 
   login(e) {
     e.preventDefault();
-    fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-    }).catch((error) => {
+    fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
+    .catch((error) => {
         console.log(error);
       });
   }
 
   signup(e){
     e.preventDefault();
-    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-    }).then((u)=>{console.log(u)})
+    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
     .catch((error) => {
         console.log(error);
       })
   }
   render() {
     return (
+
       <div className="col-md-6">
+        <CustomNavbar />
         <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Cutomer's Email</label>
-            <input  value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-            <small id="emailHelp" class="form-text text-muted"></small>
+          <div class="email-form-group">
+            <label for="customerEmail">Cutomer's Email</label>
+            <input  value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="customerEmail" aria-describedby="emailHelp" placeholder="Enter email" />
+
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input  value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+          <div class="email-form-group">
+            <label for="customerPassword">Password</label>
+            <input  value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="customerPassword" placeholder="Password" />
           </div>
           <button type="submit" onClick={this.login} class="btn btn-primary">Login</button>
           <button onClick={this.signup} style={{marginLeft: '25px'}} className="btn btn-success">Signup</button>

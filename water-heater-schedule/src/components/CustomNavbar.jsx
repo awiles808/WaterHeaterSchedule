@@ -13,25 +13,29 @@ import { Link } from 'react-router-dom';
     </Navbar.Brand>
   </Navbar.Header>
   <Nav>
-    <NavItem eventKey={1} href="./customer">
-    {/* <NavItem eventKey={1} componentClass={Link} to='/customer'> */}
-      Customer Information
+    <NavItem eventKey={1} href="./login">
+    {/* <NavItem eventKey={1} componentClass={Link} to='/login'> */}
+      Log In
     </NavItem>
-      {/* <NavItem eventKey={2} componentClass={Link} to='/water'> */}
-    <NavItem eventKey={2} href="./water">
-    {/* eventKey={2} componentClass={Link} to='/water'> */}
-      Water Heater Information
+      {/* <NavItem eventKey={2} componentClass={Link} to='/login'> */}
+    <NavItem eventKey={2} href="./login">
+    {/* eventKey={2} componentClass={Link} to='/login'> */}
+      Water Heater
     </NavItem>
-    <NavItem eventKey={3} href="./results">
-    {/* eventKey={3} componentClass={Link} to='/results'> */}
-      Results
+    <NavItem eventKey={3} href="./login">
+    {/* <NavItem eventKey={3} componentClass={Link} to='/login'> */}
+      Service Calls
     </NavItem>
-    <NavDropdown eventKey={4} title="Other Links" id="basic-nav-dropdown">
-      <MenuItem eventKey={4.1}>Future Link</MenuItem>
-      <MenuItem eventKey={4.2}>Future Link</MenuItem>
-      <MenuItem eventKey={4.3}>Future Link</MenuItem>
+    <NavItem eventKey={4} href="./login">
+    {/* eventKey={3} componentClass={Link} to='/login'> */}
+      Remodel / Future Jobs
+    </NavItem>
+    <NavDropdown eventKey={5} title="Other" id="basic-nav-dropdown">
+      <MenuItem eventKey={5.1} href="./form">To Do</MenuItem>
+      <MenuItem eventKey={5.2}>Future Link</MenuItem>
+      <MenuItem eventKey={5.3}>Future Link</MenuItem>
       <MenuItem divider />
-      <MenuItem eventKey={4.4} href="/">Home</MenuItem>
+      <MenuItem eventKey={5.4} href="/">Home</MenuItem>
     </NavDropdown>
   </Nav>
 </Navbar>
