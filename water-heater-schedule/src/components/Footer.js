@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CustomerBackgroundPic from '../Images/CustomerBackgroundPic.jpg';
 
 
 class Footer extends Component {
@@ -10,15 +11,19 @@ class Footer extends Component {
   render() {
     return (
       <footer>
+        {/* <div className="CustomerBackgroundPic" >
+        <img src={ CustomerBackgroundPic } className= "photo" alt="Wood"/>
+          </div> */}
         <ul className="site-link">
-          <li>
+          <div>
             &copy; {this.state.year} Auburn Wiles
-          </li>
+          </div>
         </ul>
+
       </footer>
 
     );
   }
 }
 
-export default Footer;
+export default Footer

@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 
 
 
+
 class CustomerFormContainer extends Component {
 	render() {
 		return (
@@ -14,7 +15,7 @@ class CustomerFormContainer extends Component {
 
         <Navbar />
 				{/* <Login /> */}
-				<Homepage />
+				{/* <Homepage /> */}
 				<Footer />
 
 			</div>

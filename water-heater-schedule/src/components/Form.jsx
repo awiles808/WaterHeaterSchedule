@@ -3,6 +3,8 @@ import fire from '../fire';
 import { Link } from 'react-router-dom';
 import CustomNavbar from './CustomNavbar';
 import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
+import Homepage from '../components/Homepage';
+
 
 
 class Form extends Component {
@@ -12,7 +14,7 @@ class Form extends Component {
       [] }; // <- set up react state
   }
   componentWillMount(){
-    /* Create reference to names in Firebase Database */
+    /* Creates reference to names in Firebase Database, but need top create with email */
     let namesRef = fire.database().ref('names').orderByKey().limitToLast(100);
     namesRef.on('child_added', snapshot => {
       /* Update React state when message is added at Firebase Database */
@@ -22,7 +24,7 @@ class Form extends Component {
   }
   addMessage(e){
     e.preventDefault(); // <- prevent form submit from reloading the page
-    /* Send the message to Firebase */
+    /* Send the message to Firebase..But how can I link to Firebase? */
     fire.database().ref('names').push( this.inputEl.value );
     this.inputEl.value = ''; // <- clear the input
   }
@@ -35,9 +37,14 @@ class Form extends Component {
           <Jumbotron>
         <input type="text" ref={ el => this.inputEl = el }/>
         <input type="submit"/>
+         {/* { /* Render the list of names */
+           this.state.names.map( message => <li key={message.id}>{message.text}</li> )
+       }
+
 
           </Jumbotron>
         </Grid>
+        <Homepage />
       </form>
     </div>
     );
@@ -45,7 +52,3 @@ class Form extends Component {
 }
 
 export default Form;
-
-// {/* { /* Render the list of names */
-//   this.state.names.map( message => <li key={message.id}>{message.text}</li> )
-// } */}

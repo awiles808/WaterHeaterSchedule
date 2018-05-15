@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import fire from '../fire';
-import Results from '../components/Results';
+import fire, { auth, provider } from '../fire';
+import Form from '../components/Form';
 import Login from '../components/Login';
+// import Homepage from '../components/Homepage';
+
 
 class LoginContainer extends Component {
   constructor() {
@@ -24,7 +26,7 @@ class LoginContainer extends Component {
 
       } else {
         this.setState({ user: null });
-        
+
       }
     });
   }
@@ -32,11 +34,7 @@ class LoginContainer extends Component {
   render() {
     return (
       <div className="LoginContainer">
-        {this.state.user ? (
-          <Results />
-        ) :
-          (
-            <Login />
+        {this.state.user ? (<Form />) : (<Login />
           )}
       </div>
     );

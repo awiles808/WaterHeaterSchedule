@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import HomePageBacPic from '../Images/HomePageBacPic.jpg';
+import CustomerBackgroundPic from '../Images/CustomerBackgroundPic.jpg';
 import '../homepage.css';
 import { Link } from 'react-router-dom';
 import fire from '../fire';
-
-// import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap'
+import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap'
 
 
 class Homepage extends Component {
@@ -22,7 +21,7 @@ class Homepage extends Component {
     render() {
         return (
             <div>
-                
+
                 <button onClick={this.logout}>Logout</button>
             </div>
         );

@@ -1,28 +1,34 @@
-.App {
-  text-align: center;
+body {
+  background-image: url("./Images/ResultsBackgroundPic.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.btn {
+  color: var(--button-color);
+  background-color: var(black);
+  border-radius: var(--border-radius);
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.btn:hover {
+  box-shadow: inset 0 0 0 20rem var(--darken-1);
 }
 
-.App-title {
-  font-size: 1.5em;
-}
 
-.App-intro {
-  font-size: large;
-}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+
+
+
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min)
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min)
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min)

@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import fire from '../fire';
 import '../login.css';
 import CustomNavbar from './CustomNavbar';
+import Footer from './Footer'
 
 class Login extends Component {
   constructor(props) {
     super(props);
     this.login = this.login.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit =this.handleSubmit.bind(this);
     this.signup = this.signup.bind(this);
     this.state = {
       email: '',
@@ -16,7 +18,24 @@ class Login extends Component {
     };
   }
 
+  handleSubmit(e) {
+  e.preventDefault();
+  const itemsRef = fire.database().ref('name');
+  const item = {
+    email: this.state.currentItem,
+    password: this.state.username
+  }
+  itemsRef.push(item);
+  this.setState({
+    email: '',
+    password: ''
+  });
+}
+
   handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+  handleSubmit(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
 
@@ -37,15 +56,16 @@ class Login extends Component {
   }
   render() {
     return (
+      <div>
+      <CustomNavbar />
 
-      <div className="col-md-6">
-        <CustomNavbar />
+      <div className="col-md-8">
         <form>
           <div class="email-form-group">
             <label for="customerEmail">Cutomer's Email</label>
             <input  value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="customerEmail" aria-describedby="emailHelp" placeholder="Enter email" />
+        </div>
 
-          </div>
           <div class="email-form-group">
             <label for="customerPassword">Password</label>
             <input  value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="customerPassword" placeholder="Password" />
@@ -54,6 +74,7 @@ class Login extends Component {
           <button onClick={this.signup} style={{marginLeft: '25px'}} className="btn btn-success">Signup</button>
         </form>
 
+        </div>
       </div>
     );
   }

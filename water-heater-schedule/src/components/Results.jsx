@@ -3,6 +3,7 @@ import ResultsBackgroundPic from '../Images/ResultsBackgroundPic.jpg';
 import { Link } from 'react-router-dom';
 import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
 import '../results.css';
+import Homepage from './Homepage'
 
 export default class Results extends Component{
   render() {
@@ -12,9 +13,10 @@ export default class Results extends Component{
           <h1>Results</h1>
 
         </Jumbotron>
-        <Link to='/'>
+        <Link to='/form'>
           <Button bsStyle='primary'>Home</Button>
       </Link>
+    <Homepage />
     </Grid>
     )
   }

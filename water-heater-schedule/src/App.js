@@ -16,6 +16,11 @@ class App extends Component {
 }
 
 export default App;
+
+
+
+
+
 // import React, { Component } from 'react';
 // import fire from './fire';
 // import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
