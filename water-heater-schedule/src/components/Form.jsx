@@ -44,8 +44,9 @@ class Form extends Component {
 
           </Jumbotron>
         </Grid>
-        <Homepage />
+
       </form>
+        <Homepage />
     </div>
     );
   }
