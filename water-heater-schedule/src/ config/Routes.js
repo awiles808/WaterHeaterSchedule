@@ -6,7 +6,7 @@ import HomepageContainer from '../containers/HomepageContainer';
 import Login from '../components/Login';
 import LoginContainer from '../containers/LoginContainer';
 import Homepage from '../components/Homepage';
-import CustomerFormContainer from '../containers/CustomerFormContainer';
+import CustomerForm from '../components/CustomerForm';
 
 
 
@@ -17,7 +17,7 @@ import CustomerFormContainer from '../containers/CustomerFormContainer';
 export default
   <Switch>
 
-    <Route exact path='/CustomerFormContainer' component={ CustomerFormContainer }/>
+    <Route exact path='/CustomerForm' component={ CustomerForm }/>
     <Route exact path='/Homepage' component={ Homepage }/>
     <Route exact path='/Login' component={ Login }/>
     <Route exact path='/' component={ LoginContainer }/>

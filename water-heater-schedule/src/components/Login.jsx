@@ -62,7 +62,7 @@ class Login extends Component {
       <div className="col-md-8">
         <form>
           <div class="email-form-group">
-            <label for="customerEmail">Cutomer's Email</label>
+            <label for="customerEmail">Customer Email</label>
             <input  value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="customerEmail" aria-describedby="emailHelp" placeholder="Enter email" />
         </div>
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../customnavbar.css';
+import CustomerForm from '../components/CustomerForm';
 
 
  class CustomNavbar extends Component {
@@ -23,7 +24,7 @@ import '../customnavbar.css';
     {/* eventKey={2} componentClass={Link} to='/login'> */}
       Water Heater
     </NavItem>
-    <NavItem eventKey={3} href="./login">
+    <NavItem eventKey={3} href="./CustomerForm">
     {/* <NavItem eventKey={3} componentClass={Link} to='/login'> */}
       Service Calls
     </NavItem>
