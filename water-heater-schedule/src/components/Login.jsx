@@ -4,6 +4,7 @@ import fire from '../fire';
 import '../login.css';
 import CustomNavbar from './CustomNavbar';
 import Footer from './Footer'
+import Homepage from './Homepage';
 
 class Login extends Component {
   constructor(props) {
@@ -73,7 +74,7 @@ class Login extends Component {
           <button type="submit" onClick={this.login} class="btn btn-primary">Login</button>
           <button onClick={this.signup} style={{marginLeft: '25px'}} className="btn btn-success">Signup</button>
         </form>
-
+        <Homepage />
         </div>
       </div>
     );

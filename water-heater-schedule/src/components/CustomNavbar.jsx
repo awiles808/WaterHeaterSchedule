@@ -11,13 +11,13 @@ import CustomerForm from '../components/CustomerForm';
       <Navbar>
   <Navbar.Header>
     <Navbar.Brand>
-    <Link to='/'>Home</Link>
+    <Link to='/'>Louie's Schedule</Link>
     </Navbar.Brand>
   </Navbar.Header>
   <Nav>
     <NavItem eventKey={1} href="./login">
     {/* <NavItem eventKey={1} componentClass={Link} to='/login'> */}
-      Log In
+      Log In / Log Out
     </NavItem>
       {/* <NavItem eventKey={2} componentClass={Link} to='/login'> */}
     <NavItem eventKey={2} href="./login">

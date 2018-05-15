@@ -7,6 +7,7 @@ import Login from '../components/Login';
 import LoginContainer from '../containers/LoginContainer';
 import Homepage from '../components/Homepage';
 import CustomerForm from '../components/CustomerForm';
+import HeaterForm from '../components/HeaterForm';
 
 
 
@@ -18,6 +19,7 @@ export default
   <Switch>
 
     <Route exact path='/CustomerForm' component={ CustomerForm }/>
+    <Route exact path='/HeaterForm' component={ HeaterForm }/>
     <Route exact path='/Homepage' component={ Homepage }/>
     <Route exact path='/Login' component={ Login }/>
     <Route exact path='/' component={ LoginContainer }/>

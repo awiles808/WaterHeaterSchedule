@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import fire, { auth, provider } from '../fire';
 import Form from '../components/Form';
 import Login from '../components/Login';
-// import Homepage from '../components/Homepage';
+import HeaterForm from '../components/HeaterForm';
 
 
 class LoginContainer extends Component {
@@ -34,7 +34,7 @@ class LoginContainer extends Component {
   render() {
     return (
       <div className="LoginContainer">
-        {this.state.user ? (<Form />) : (<Login />
+        {this.state.user ? (<HeaterForm />) : (<Login />
           )}
       </div>
     );
